@@ -1,47 +1,59 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Xcode
+!**/*.xcodeproj
+!**/*.pbxproj
+!**/*.xcworkspacedata
+!**/*.xcsettings
+!**/*.xcscheme
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
 
-# Folder config file
-Desktop.ini
+# Gradle
+/build/
+/Examples/**/android/app/build/
+/Examples/**/android/app/gradle/
+/Examples/**/android/app/gradlew
+/Examples/**/android/app/gradlew.bat
+/ReactAndroid/build/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Buck
+.buckd
+buck-out
+/ReactAndroid/src/main/jni/prebuilt/lib/armeabi-v7a/
+/ReactAndroid/src/main/jni/prebuilt/lib/x86/
+/ReactAndroid/src/main/gen
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Android
+.idea
+.gradle
+local.properties
+*.iml
+/android/
 
-# Windows shortcuts
-*.lnk
+# Node
+node_modules
+*.log
+.nvm
 
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# OS X
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Thumbnails
-._*
+# Test generated files
+/ReactAndroid/src/androidTest/assets/AndroidTestBundle.js
+*.js.meta
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+/coverage
+/third-part
