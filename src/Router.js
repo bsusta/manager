@@ -4,7 +4,6 @@ import LoginForm from './components/LoginForm';
 import EmployeeList from './components/EmployeeList';
 import EmployeeCreate from './components/EmployeeCreate';
 import EmployeeEdit from './components/EmployeeEdit';
-import { logoutUser } from './actions';
 
 const RouterComponent = () => {
     return (
@@ -17,8 +16,6 @@ const RouterComponent = () => {
             <Scene
             onRight={() => Actions.employeeCreate()}
             rightTitle="Add"
-            onLeft={logoutUser}
-            leftTitle="Logout"
             key="employeeList"
             component={EmployeeList}
             title="Employees"
