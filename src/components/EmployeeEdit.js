@@ -7,7 +7,7 @@ import { employeeUpdate, employeeSave, employeeDelete } from '../actions';
 import { Card, CardSection, Button, Confirm } from './common';
 
 class EmployeeEdit extends Component {
-  state = { showModal: false};
+  state = { showModal: false };
 
   componentWillMount() {
     _.each(this.props.employee, (value, prop) => {

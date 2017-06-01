@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import firebase from 'firebase';
+import { createStore, applyMiddleware, compose } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import reducers from './reducers';
+import firebase from 'firebase';
+import devTools from 'remote-redux-devtools';
 import Router from './Router';
+import reducers from './reducers';
 
 class App extends Component {
   componentWillMount() {
@@ -19,10 +20,14 @@ class App extends Component {
     firebase.initializeApp(config);
   }
 
-
   render() {
-    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
+    const enhancer = compose(
+      applyMiddleware(ReduxThunk),
+      devTools({
+        name: 'manager', realtime: true,
+      }),
+    );
+    const store = createStore(reducers, {}, enhancer);
     return (
       <Provider store={store}>
           <Router />
